@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\USUARIO\Desktop\Agar.io\Debug\Project132.exe">
+   <Modules>
+    <Module Name="project132.exe">
+     <Messages>
+      <Message TypeName="MarkAssembliesWithAssemblyVersion" Category="Microsoft.Design" CheckId="CA1016" Status="Active" Created="2019-02-26 05:04:12Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Agregue un atributo AssemblyVersion a 'Project132.exe'.</Issue>
+      </Message>
+      <Message TypeName="MarkWindowsFormsEntryPointsWithStaThread" Category="Microsoft.Usage" CheckId="CA2232" Status="Active" Created="2019-02-26 05:04:12Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Marque el método de punto de entrada 'Global::main(void)' en el ensamblado 'Project132.exe' con STAThreadAttribute.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Ario">
+       <Types>
+        <Type Name="Introduccion" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="fondo" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2019-02-26 05:04:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">'Introduccion' contiene el campo 'Introduccion::fondo' que es de tipo IDisposable: 'Bitmap'. Cambie el método Dispose en 'Introduccion' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MyForm" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#timer1_Tick(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="No usar Dispose varias veces en objetos" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-02-26 05:04:12Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\users\usuario\desktop\agar.io\project132" File="myform.h" Line="169">El objeto 'this' admite Dispose más de una vez en el método 'MyForm::timer1_Tick(Object^, EventArgs^)'. Para evitar generar una excepción System.ObjectDisposedException, no debe llamar a Dispose más de una vez en un objeto.: Lines: 169</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+   <Name>Aplique Dispose a los campos a los que se pueda</Name>
+   <Description>Si un tipo que implementa IDisposable posee campos que también implementan IDisposable, la implementación de Dispose() de los tipos encapsuladores debe llamar a Dispose() en todos los campos disponibles.</Description>
+   <Resolution Name="Default">{0} contiene el campo {1} que es de tipo IDisposable: {2}. Cambie el método Dispose en {0} para que llame a Dispose o Close en este campo.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182328.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithAssemblyVersion" Category="Microsoft.Design" CheckId="CA1016">
+   <Name>Marque los ensamblados con AssemblyVersionAttribute</Name>
+   <Description>Los ensamblados deberían utilizar números de versión. El número de versión se considera parte de la identidad del ensamblado. El control de versiones se aplica mediante el atributo AssemblyVersion.</Description>
+   <Resolution Name="Default">Agregue un atributo AssemblyVersion a {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182155.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkWindowsFormsEntryPointsWithStaThread" Category="Microsoft.Usage" CheckId="CA2232">
+   <Name>Marcar puntos de entrada de Windows Forms con STAThread</Name>
+   <Description>Los ensamblados que hacen referencia a System.Windows.Forms deben tener STAThreadAttribute. Si sucede algún error al aplicar este atributo, la aplicación probablemente dejará de funcionar. Windows Forms se basa en un número de componentes que utilizan el modelo STA.</Description>
+   <Resolution Name="Default">Marque el método de punto de entrada {0} en el ensamblado {1} con STAThreadAttribute.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182351.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="No usar Dispose varias veces en objetos" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>No usar Dispose varias veces en objetos</Name>
+   <Description>Un método Dispose correctamente implementado se puede llamar varias veces sin producir ninguna excepción. Sin embargo, esto no está garantizado y, para evitar generar una excepción System.ObjectDisposedException, no debe llamar al método Dispose más de una vez en un objeto.</Description>
+   <Resolution Name="Default">El objeto {0} admite Dispose más de una vez en el método {1}. Para evitar generar una excepción System.ObjectDisposedException, no debe llamar a Dispose más de una vez en un objeto.: Lines: 169</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoría</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Contraer todo</String>
+  <String Key="CheckId">Comprobar id.</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">errores</String>
+  <String Key="ExpandAll">Expandir todo</String>
+  <String Key="Help">Ayuda</String>
+  <String Key="Line">Línea</String>
+  <String Key="Messages">mensajes</String>
+  <String Key="LocationNotStoredInPdb">[Ubicación no almacenada en Pdb]</String>
+  <String Key="Project">Proyecto</String>
+  <String Key="Resolution">Resolución</String>
+  <String Key="Rule">Regla</String>
+  <String Key="RuleFile">Archivo de regla</String>
+  <String Key="RuleDescription">Descripción de la regla</String>
+  <String Key="Source">Origen</String>
+  <String Key="Status">Estado</String>
+  <String Key="Target">Círculos concéntricos</String>
+  <String Key="Warning">Advertencia</String>
+  <String Key="Warnings">advertencias</String>
+  <String Key="ReportTitle">Informe de análisis del código</String>
+ </Localized>
+</FxCopReport>

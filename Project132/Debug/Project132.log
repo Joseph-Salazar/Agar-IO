@@ -1,0 +1,38 @@
+﻿  Introduccion.cpp
+c:\users\usuario\desktop\agar.io\project132\jugador.h(22): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\jugador.h(24): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\jugador.h(48): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\arrcelmenor.h(14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\arrcelmenor.h(29): warning C4018: '<': no coinciden signed/unsigned
+c:\users\usuario\desktop\agar.io\project132\celmayor.h(14): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\arrcelmayor.h(13): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\arrcelmayor.h(26): warning C4018: '<': no coinciden signed/unsigned
+c:\users\usuario\desktop\agar.io\project132\arrcelvirus.h(13): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\arrcelvirus.h(23): warning C4018: '<': no coinciden signed/unsigned
+c:\users\usuario\desktop\agar.io\project132\arrcelvirusexplota.h(20): warning C4018: '<': no coinciden signed/unsigned
+c:\users\usuario\desktop\agar.io\project132\myform.h(44): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\introduccion.h(33): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  MyForm.cpp
+c:\users\usuario\desktop\agar.io\project132\jugador.h(22): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\jugador.h(24): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\jugador.h(48): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\arrcelmenor.h(14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\arrcelmenor.h(29): warning C4018: '<': no coinciden signed/unsigned
+c:\users\usuario\desktop\agar.io\project132\celmayor.h(14): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\arrcelmayor.h(13): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\arrcelmayor.h(26): warning C4018: '<': no coinciden signed/unsigned
+c:\users\usuario\desktop\agar.io\project132\arrcelvirus.h(13): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\usuario\desktop\agar.io\project132\arrcelvirus.h(23): warning C4018: '<': no coinciden signed/unsigned
+c:\users\usuario\desktop\agar.io\project132\arrcelvirusexplota.h(20): warning C4018: '<': no coinciden signed/unsigned
+c:\users\usuario\desktop\agar.io\project132\myform.h(44): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Compilando...
+  Generando código...
+  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
+  Introduccion.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Project132.vcxproj -> C:\Users\USUARIO\Desktop\Agar.io\Debug\Project132.exe
+  Running Code Analysis...
+MSBUILD : warning CA1016: Microsoft.Design : Agregue un atributo AssemblyVersion a 'Project132.exe'.
+MSBUILD : warning CA2232: Microsoft.Usage : Marque el método de punto de entrada 'Global::main(void)' en el ensamblado 'Project132.exe' con STAThreadAttribute.
+MSBUILD : warning CA2213: Microsoft.Usage : 'Introduccion' contiene el campo 'Introduccion::fondo' que es de tipo IDisposable: 'Bitmap'. Cambie el método Dispose en 'Introduccion' para que llame a Dispose o Close en este campo.
+c:\users\usuario\desktop\agar.io\project132\myform.h(169): warning CA2202: Microsoft.Usage : El objeto 'this' admite Dispose más de una vez en el método 'MyForm::timer1_Tick(Object^, EventArgs^)'. Para evitar generar una excepción System.ObjectDisposedException, no debe llamar a Dispose más de una vez en un objeto.: Lines: 169
+  Code Analysis Complete -- 0 error(s), 4 warning(s)
